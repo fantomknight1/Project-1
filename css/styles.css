@@ -1,0 +1,49 @@
+.container {
+  border: 5px solid black;
+  height: 400px;
+  width: 600px;
+  margin: 0 auto;
+}
+#upperSky {
+  height: 300px;
+  width: 600px;
+  background-color: rgb(26, 167, 203);
+  position: relative;
+}
+#character1 {
+  height: 30px;
+  width: 10px;
+  background-color: red;
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+/*  animation-duration: 15s;
+  animation-name: character1;*/
+}
+/*@keyframes character1 {
+  from {
+    margin-left: 0%;
+    width: 5%;
+  }
+  to {
+    margin-left: 100%;
+    width: 5%;
+  }
+}*/
+
+#topGround {
+  height: 15px;
+  width: 600px;
+  background-color: rgb(76, 40, 25);
+}
+#midGround {
+  height: 30px;
+  width: 600px;
+  background-color: rgb(90, 51, 11);
+}
+#lowGround {
+  height: 55px;
+  width: 600px;
+  background-color: rgb(136, 86, 21);
+}
+
