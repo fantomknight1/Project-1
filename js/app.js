@@ -1,14 +1,27 @@
 $(document).ready(function() {
   var $char1 = $('#character1');
-  $(document).keydown( function(e) {
-    switch(e.which) {
-      case 39:
-        console.log(e);
+  $(document).on('keydown' function(e) {
+    if(e.which === 39) {:
+        console.log('key pressed');
         $('#character1').animate({right: "+=50px"});
         break;
     };
   })
 })
+
+
+// $(document).ready(function() {
+//   var $char1 = $('#character1');
+//   $(document).keydown( function(e) {
+//     switch(e.which) {
+//       case 39:
+//         console.log(e);
+//         $('#character1').animate({right: "+=50px"});
+//         break;
+//     };
+//   })
+// })
+
 
 // $("body").keydown(function(e) {
 //   if(e.keyCode == 37) { // left
