@@ -9,6 +9,7 @@
   width: 600px;
   background-color: rgb(26, 167, 203);
   position: relative;
+  overflow: auto;
 }
 #character1 {
   height: 30px;
@@ -16,10 +17,26 @@
   background-color: red;
   position: absolute;
   bottom: 0px;
-  left: 15px;
+}
+
+#character2 {
+  height: 30px;
+  width: 10px;
+  background-color: blue;
+  position: absolute;
+  bottom: 0px;
+}
+
+#cloud1 {
+  height: 30px;
+  width: 60px;
+  background: url(../images/cloud1.png);
+  position: absolute;
+  
+}
 /*  animation-duration: 15s;
   animation-name: character1;*/
-}
+
 /*@keyframes character1 {
   from {
     margin-left: 0%;
