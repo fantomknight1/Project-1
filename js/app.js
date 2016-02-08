@@ -194,14 +194,14 @@ $(document).ready(function(){
 
 
 
-I used a number of websites while trying to figure out how to solve problems.  I don't think I really
-took much but I'm including the websites here just in case.
+// I used a number of websites while trying to figure out how to solve problems.  I don't think I really
+// took much but I'm including the websites here just in case.
 
-http://jsfiddle.net/knam8/   .... I used this site to try and figure out how to detect overlapping divs.
-http://www.tutorialrepublic.com/faq/move-an-element-to-left-right-up-and-down-using-arrow-keys-in-jquery.php ..... this was when I was trying to find out how to make my characters move.
-http://gamequeryjs.com/documentation/first-tutorial/first-tutorial-step-2/#enemies ......... I was trying to understand objects better when dealing with a game.
-http://www.w3schools.com/games/game_obstacles.asp ............ this was useful for getting an idea about how to make objects move.
-http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_ani_right ............ This was useful in seeing how things animate and how to implement it.
+// http://jsfiddle.net/knam8/   .... I used this site to try and figure out how to detect overlapping divs.
+// http://www.tutorialrepublic.com/faq/move-an-element-to-left-right-up-and-down-using-arrow-keys-in-jquery.php ..... this was when I was trying to find out how to make my characters move.
+// http://gamequeryjs.com/documentation/first-tutorial/first-tutorial-step-2/#enemies ......... I was trying to understand objects better when dealing with a game.
+// http://www.w3schools.com/games/game_obstacles.asp ............ this was useful for getting an idea about how to make objects move.
+// http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_ani_right ............ This was useful in seeing how things animate and how to implement it.
 
 
 
