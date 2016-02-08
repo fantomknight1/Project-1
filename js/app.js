@@ -1,3 +1,40 @@
+
+var obstacles;
+var $char1 = $('#character1');
+var $char2 = $('#character2');
+
+var object = 
+[{name: 'Jerry', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/jerry.png)', backgroundSize: 'cover'},
+{name: 'Tammy', width: '13px', height: '37px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/tammy.png)', backgroundSize: 'cover'},
+{name: 'Mr. Meeseeks', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/mr.meseeks.png)', backgroundSize: 'cover'},
+{name: 'Mr. Meeseeks', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/mr.meseeks.png)', backgroundSize: 'cover'},
+{name: 'Mr. Meeseeks', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/mr.meseeks.png)', backgroundSize: 'cover'},
+{name: 'Mr. Meeseeks', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/mr.meseeks.png)', backgroundSize: 'cover'},
+{name: 'Mr. Meeseeks', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/mr.meseeks.png)', backgroundSize: 'cover'},
+{name: 'Telepathic Spider', width: '55px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/spider.png)', backgroundSize: 'cover'},
+{name: 'Telepathic Spider', width: '55px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/spider.png)', backgroundSize: 'cover'},
+{name: 'Telepathic Spider', width: '55px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/spider.png)', backgroundSize: 'cover'},
+{name: 'Telepathic Spider', width: '55px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/spider.png)', backgroundSize: 'cover'},
+{name: 'Counciler Rick 1', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'white', backgroundSize: 'cover'},
+{name: 'Counciler Rick 2', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'white', backgroundSize: 'cover'},
+{name: 'Counciler Rick 3', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'white', backgroundSize: 'cover'},
+{name: 'Counciler Rick 4', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'white', backgroundSize: 'cover'},
+{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green', backgroundSize: 'cover'},
+{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green', backgroundSize: 'cover'},
+{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green', backgroundSize: 'cover'},
+{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green', backgroundSize: 'cover'},
+{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green', backgroundSize: 'cover'},
+{name: 'Snowball', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'green', backgroundSize: 'cover'},
+{name: 'Jellybean King', width: '22px', height: '37px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/jelly.king.png)', backgroundSize: 'cover'},
+{name: 'Abradolf Linkler', width: '18px', height: '50px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/abradolf.linkler.png)', backgroundSize: 'cover'},
+{name: 'Cousin Nicki', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'green', backgroundSize: 'cover'},
+{name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'},
+{name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'},
+{name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'},
+{name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'}, 
+{name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'}];
+
+
 function jump($el){
   $el.animate({bottom: '+=10px'}, .5);
 }
@@ -5,48 +42,6 @@ function jump($el){
 function fall($el){
   $el.animate({bottom: 0});
 }
-
-var obstacles;
-var $char1 = $('#character1');
-var $char2 = $('#character2');
-
-var object = 
-[{name: 'Jerry', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Tammy', width: '9px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'yellow'},
-{name: 'Mr. Meeseeks', width: '10px', height: '35px', position: 'absolute', left: '100%', bottom: '0px', background: 'blue'},
-{name: 'Mr. Meeseeks', width: '10px', height: '35px', position: 'absolute', left: '100%', bottom: '0px', background: 'blue'},
-{name: 'Mr. Meeseeks', width: '10px', height: '35px', position: 'absolute', left: '100%', bottom: '0px', background: 'blue'},
-{name: 'Mr. Meeseeks', width: '10px', height: '35px', position: 'absolute', left: '100%', bottom: '0px', background: 'blue'},
-{name: 'Mr. Meeseeks', width: '10px', height: '35px', position: 'absolute', left: '100%', bottom: '0px', background: 'blue'},
-{name: 'Telepathic Spider', width: '40px', height: '15px', position: 'absolute', left: '100%', bottom: '0px', background: 'black'},
-{name: 'Telepathic Spider', width: '40px', height: '15px', position: 'absolute', left: '100%', bottom: '0px', background: 'black'},
-{name: 'Telepathic Spider', width: '40px', height: '15px', position: 'absolute', left: '100%', bottom: '0px', background: 'black'},
-{name: 'Telepathic Spider', width: '40px', height: '15px', position: 'absolute', left: '100%', bottom: '0px', background: 'black'},
-{name: 'Counciler Rick 1', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'white'},
-{name: 'Counciler Rick 2', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'white'},
-{name: 'Counciler Rick 3', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'white'},
-{name: 'Counciler Rick 4', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'white'},
-{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Federation Police', width: '12px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Snowball', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Jellybean King', width: '15px', height: '25px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Abradolf Linkler', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Cousin Nicki', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Fart', width: '15px', height: '15px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Fart', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Fart', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'},
-{name: 'Fart', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'}, 
-{name: 'Fart', width: '10px', height: '30px', position: 'absolute', left: '100%', bottom: '0px', background: 'green'}];
-
-
-
-
-
-
-
 
 
 
@@ -149,7 +144,7 @@ $(document).ready(function(){
 
 
 
-  function Enemy (name, width, height, background, position, left, bottom, move) {
+  function Enemy (name, width, height, background, position, left, bottom, backgroundSize) {
     this.name = name;
     this.width = width;
     this.height = height;
@@ -157,21 +152,21 @@ $(document).ready(function(){
     this.position = position;
     this.left = left;
     this.bottom = bottom;
-    this.move = move;
+    this.backgroundSize = backgroundSize;
   }
 
   Enemy.prototype.render = function() {
 
     $('#upperSky').append($('<div>').addClass('enemyObject')
       .css('width', this.width)
-      .css('height', this.height).css('background', this.background).css('position', this.position).css('left', this.left).css('bottom', this.bottom));
+      .css('height', this.height).css('background', this.background).css('position', this.position).css('left', this.left).css('bottom', this.bottom).css('background-size', this.backgroundSize));
   };
 
   var enemyArray = [];
 
   for (var i = 0; i < object.length; i++) {
     var r = makeRandomNum(object.length);
-    var myObject = new Enemy(object[r].name, object[r].width, object[r].height, object[r].background, object[r].position, object[r].left, object[r].bottom);
+    var myObject = new Enemy(object[r].name, object[r].width, object[r].height, object[r].background, object[r].position, object[r].left, object[r].bottom, object[r].backgroundSize);
     enemyArray.push(myObject);
   };
   var intervalId;
@@ -183,7 +178,6 @@ $(document).ready(function(){
     enemyArray.pop().render();
   };
   intervalId = setInterval(paintEnemies, 2000)
-  walkInterval = setInterval(moveObjectLeft, 1000)
 
   function makeRandomNum(max) {
     return Math.floor(Math.random() * max)
@@ -192,6 +186,28 @@ $(document).ready(function(){
   function moveObjectLeft() {
     $('.enemyObject').finish().animate({left: '-=50px'})
   }
+
+  walkInterval = setInterval(moveObjectLeft, 1000)
+  //checkCollisions()
+  // collision1();
+  // function collision1() {
+  //   if ($char1.position().left < $('.enemyObject').position().left + $('.enemyObject').width && $char1.left + $char1.width > $('.enemyObject').left && $char1.bottom < $('.enemyObject').bottom + $('.enemyObject').height && $char1.bottom + $char1.height > $('.enemyObject').bottom) {
+  //     console.log('collision detected');
+  //   }
+  // }
+
+ // function checkCollisions() {
+ //  for (var i = 0; i < enemyArray.length; i++) {
+ //    // var enemycol = enemyArray[i];
+
+ //    if (enemyObject.x < $char1.x + $char1.width &&
+ //       enemyObject.x + enemyObject.width > $char1.x &&
+ //       enemyObject.y < $char1.y + $char1.height &&
+ //       enemyObject.height + enemyObject.y > $char1.y) {
+ //     console.log('COLLISION');
+ //    }
+ //    }
+ //  } 
 
 })
 
