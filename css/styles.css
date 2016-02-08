@@ -1,0 +1,90 @@
+.h1 {
+  color: yellow;
+  text-align: center;
+}
+.h6 {
+  color: red;
+  text-align: center;
+}
+.allBody {
+  background: url(../images/Blits-and-Chitz.jpg);
+  background-size: cover;
+}
+.enemyObject {
+  background-size: cover;
+}
+.container {
+  border: 5px solid black;
+  height: 400px;
+  width: 600px;
+  margin: 0 auto;
+}
+#upperSky {
+  height: 300px;
+  width: 600px;
+  background-color: rgb(26, 167, 203);
+  position: relative;
+  overflow: auto;
+}
+#character1 {
+  height: 45px;
+  width: 15px;
+  background: url(../images/Rick.png);
+  background-size: cover;
+  position: absolute;
+  bottom: 0px;
+}
+
+#character2 {
+  height: 30px;
+  width: 10px;
+  background: url(../images/Morty.png);
+  background-size: cover;
+  position: absolute;
+  bottom: 0px;
+}
+
+#cloud1 {
+  height: 30px;
+  width: 60px;
+  background: url(../images/cloud1.png);
+  position: absolute;
+  
+}
+/*  animation-duration: 15s;
+  animation-name: character1;*/
+
+/*@keyframes character1 {
+  from {
+    margin-left: 0%;
+    width: 5%;
+  }
+  to {
+    margin-left: 100%;
+    width: 5%;
+  }
+}*/
+
+#topGround {
+  height: 15px;
+  width: 600px;
+  background-color: rgb(76, 40, 25);
+}
+#midGround {
+  height: 30px;
+  width: 600px;
+  background-color: rgb(90, 51, 11);
+}
+#lowGround {
+  height: 55px;
+  width: 600px;
+  background-color: rgb(136, 86, 21);
+}
+.buttons {
+  text-align: center;
+}
+button {
+  background-color: purple;
+  color: yellow;
+}
+
