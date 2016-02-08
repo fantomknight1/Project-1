@@ -3,7 +3,7 @@ var obstacles;
 var $char1 = $('#character1');
 var $char2 = $('#character2');
 
-var object = 
+var object =
 [{name: 'Jerry', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/jerry.png)', backgroundSize: 'cover'},
 {name: 'Tammy', width: '13px', height: '37px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/tammy.png)', backgroundSize: 'cover'},
 {name: 'Mr. Meeseeks', width: '15px', height: '45px', position: 'absolute', left: '100%', bottom: '0px', background: 'url(images/mr.meseeks.png)', backgroundSize: 'cover'},
@@ -31,7 +31,7 @@ var object =
 {name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'},
 {name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'},
 {name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'},
-{name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'}, 
+{name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'},
 {name: 'Fart', width: '45px', height: '35px', position: 'absolute', left: '100%', bottom: '15px', background: 'url(images/fart2.png)', backgroundSize: 'cover'}];
 
 
@@ -108,7 +108,7 @@ $(document).ready(function(){
 
   function checkKeys(e) {
   if(keys[1] || keys[0] || keys[2] || keys[3] || keys[4] || keys[5]) {
-              
+
         if (keys[2]) {
           console.log('right')
           $char1.finish().animate({left: '+=5px'});
@@ -188,32 +188,20 @@ $(document).ready(function(){
   }
 
   walkInterval = setInterval(moveObjectLeft, 1000)
-  //checkCollisions()
-  // collision1();
-  // function collision1() {
-  //   if ($char1.position().left < $('.enemyObject').position().left + $('.enemyObject').width && $char1.left + $char1.width > $('.enemyObject').left && $char1.bottom < $('.enemyObject').bottom + $('.enemyObject').height && $char1.bottom + $char1.height > $('.enemyObject').bottom) {
-  //     console.log('collision detected');
-  //   }
-  // }
-
- // function checkCollisions() {
- //  for (var i = 0; i < enemyArray.length; i++) {
- //    // var enemycol = enemyArray[i];
-
- //    if (enemyObject.x < $char1.x + $char1.width &&
- //       enemyObject.x + enemyObject.width > $char1.x &&
- //       enemyObject.y < $char1.y + $char1.height &&
- //       enemyObject.height + enemyObject.y > $char1.y) {
- //     console.log('COLLISION');
- //    }
- //    }
- //  } 
 
 })
 
 
 
 
+I used a number of websites while trying to figure out how to solve problems.  I don't think I really
+took much but I'm including the websites here just in case.
+
+http://jsfiddle.net/knam8/   .... I used this site to try and figure out how to detect overlapping divs.
+http://www.tutorialrepublic.com/faq/move-an-element-to-left-right-up-and-down-using-arrow-keys-in-jquery.php ..... this was when I was trying to find out how to make my characters move.
+http://gamequeryjs.com/documentation/first-tutorial/first-tutorial-step-2/#enemies ......... I was trying to understand objects better when dealing with a game.
+http://www.w3schools.com/games/game_obstacles.asp ............ this was useful for getting an idea about how to make objects move.
+http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_ani_right ............ This was useful in seeing how things animate and how to implement it.
 
 
 
@@ -222,8 +210,26 @@ $(document).ready(function(){
 
 
 
+//checkCollisions()
+// collision1();
+// function collision1() {
+//   if ($char1.position().left < $('.enemyObject').position().left + $('.enemyObject').width && $char1.left + $char1.width > $('.enemyObject').left && $char1.bottom < $('.enemyObject').bottom + $('.enemyObject').height && $char1.bottom + $char1.height > $('.enemyObject').bottom) {
+//     console.log('collision detected');
+//   }
+// }
 
+// function checkCollisions() {
+//  for (var i = 0; i < enemyArray.length; i++) {
+//    // var enemycol = enemyArray[i];
 
+//    if (enemyObject.x < $char1.x + $char1.width &&
+//       enemyObject.x + enemyObject.width > $char1.x &&
+//       enemyObject.y < $char1.y + $char1.height &&
+//       enemyObject.height + enemyObject.y > $char1.y) {
+//     console.log('COLLISION');
+//    }
+//    }
+//  }
 
 
 
